@@ -1,7 +1,6 @@
 <!-- src/routes/guides/[slug]/+page.svelte -->
 <script lang="ts">
   import { base } from '$app/paths';
-  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import { page } from '$app/stores';
   import { language } from '$lib/stores/languageStore';
@@ -16,7 +15,10 @@
     getItemByPath
   } from '$lib/stores/nondualityGuideStore';
   import { afterNavigate } from '$app/navigation';
-  import { browser } from '$app/environment';
+
+  // Import all markdown files at build time
+  const enModules = import.meta.glob('../../../content/guides/nonduality/en/*.md');
+  const svModules = import.meta.glob('../../../content/guides/nonduality/sv/*.md');
 
   afterNavigate(({ to, from }) => {
     if (to?.params.slug !== from?.params.slug) {
@@ -31,7 +33,6 @@
   let ContentComponent: any = null;
   let isLoading = true;
   let isAvailable = true;
-  let errorMessage = '';
   
   // Get navigation items
   const section1Items = getSection1Items();
@@ -85,36 +86,44 @@
         return;
       }
 
-      // Try to import the mdsvex component directly
-      // Try language-specific first, then English fallback
-      const pathsToTry = currentLanguage === 'sv' 
-        ? [
-            `../../../content/guides/nonduality/sv/${itemSlug}.md`,
-            `../../../content/guides/nonduality/en/${itemSlug}.md`
-          ]
-        : [`../../../content/guides/nonduality/en/${itemSlug}.md`];
+      // Build the path keys for glob imports
+      const enPath = `../../../content/guides/nonduality/en/${itemSlug}.md`;
+      const svPath = `../../../content/guides/nonduality/sv/${itemSlug}.md`;
 
       let contentLoaded = false;
       
-      for (const importPath of pathsToTry) {
+      // Try language-specific first, then English fallback
+      if (currentLanguage === 'sv' && svModules[svPath]) {
         try {
-          const module = await import(/* @vite-ignore */ importPath);
+          const module = await svModules[svPath]();
           ContentComponent = module.default;
           contentLoaded = true;
           isAvailable = true;
-          console.log(`Successfully loaded content from: ${importPath}`);
-          break;
+          console.log(`Successfully loaded content from: ${svPath}`);
         } catch (error: any) {
-          console.warn(`Failed to load from ${importPath}: ${error.message}`);
+          console.warn(`Failed to load from ${svPath}: ${error.message}`);
+        }
+      }
+      
+      // Fallback to English
+      if (!contentLoaded && enModules[enPath]) {
+        try {
+          const module = await enModules[enPath]();
+          ContentComponent = module.default;
+          contentLoaded = true;
+          isAvailable = true;
+          console.log(`Successfully loaded content from: ${enPath}`);
+        } catch (error: any) {
+          console.warn(`Failed to load from ${enPath}: ${error.message}`);
         }
       }
 
       if (!contentLoaded) {
         isAvailable = false;
+        console.warn(`No content found for slug: ${itemSlug}`);
       }
     } catch (error: any) {
       console.error(`Error loading content: ${error.message}`);
-      errorMessage = error.message;
       isAvailable = false;
     } finally {
       isLoading = false;
