@@ -159,7 +159,7 @@ const initialState: NondualityGuideStore = {
       }
     },
 
-    // Placeholder for future sections
+    // Section 2: The Pointer
     {
       id: 'section2-intro',
       path: 'section-2-the-pointer',
@@ -174,6 +174,113 @@ const initialState: NondualityGuideStore = {
         sv: 'Direkt igenkänning genom undersökning och praktik'
       }
     },
+    {
+      id: 'article2-1',
+      path: 'who-is-looking',
+      type: 'article',
+      section: 2,
+      number: 1,
+      title: {
+        en: 'Who Is Looking?',
+        sv: 'Vem tittar?'
+      },
+      description: {
+        en: 'The fundamental inquiry into the nature of self',
+        sv: 'Den grundläggande undersökningen av självets natur'
+      }
+    },
+    {
+      id: 'article2-2',
+      path: 'space-between-thoughts',
+      type: 'article',
+      section: 2,
+      number: 2,
+      title: {
+        en: 'The Space Between Thoughts',
+        sv: 'Utrymmet mellan tankar'
+      },
+      description: {
+        en: 'Noticing the gap and recognizing spacious awareness',
+        sv: 'Märka luckan och känna igen rymlig medvetenhet'
+      }
+    },
+    {
+      id: 'article2-3',
+      path: 'right-now-whats-happening',
+      type: 'article',
+      section: 2,
+      number: 3,
+      title: {
+        en: 'Right Now, What\'s Actually Happening?',
+        sv: 'Just nu, vad händer egentligen?'
+      },
+      description: {
+        en: 'Distinguishing direct experience from story',
+        sv: 'Skilja direkt erfarenhet från berättelse'
+      }
+    },
+    {
+      id: 'article2-4',
+      path: 'the-boundary-question',
+      type: 'article',
+      section: 2,
+      number: 4,
+      title: {
+        en: 'The Boundary Question',
+        sv: 'Gränsfrågan'
+      },
+      description: {
+        en: 'Where exactly are you? Finding the edge between inside and outside',
+        sv: 'Var är du exakt? Hitta gränsen mellan inuti och utanför'
+      }
+    },
+    {
+      id: 'article2-5',
+      path: 'questions-that-dissolve',
+      type: 'article',
+      section: 2,
+      number: 5,
+      title: {
+        en: 'Questions That Dissolve the Questioner',
+        sv: 'Frågor som upplöser frågaren'
+      },
+      description: {
+        en: 'Working with koans and paradoxical inquiries',
+        sv: 'Arbeta med koaner och paradoxala undersökningar'
+      }
+    },
+    {
+      id: 'article2-6',
+      path: 'noticing-the-noticer',
+      type: 'article',
+      section: 2,
+      number: 6,
+      title: {
+        en: 'Noticing the Noticer',
+        sv: 'Märka märkaren'
+      },
+      description: {
+        en: 'Turning attention back on itself to recognize awareness',
+        sv: 'Vända uppmärksamheten tillbaka på sig själv för att känna igen medvetenhet'
+      }
+    },
+    {
+      id: 'article2-7',
+      path: 'working-with-glimpses',
+      type: 'article',
+      section: 2,
+      number: 7,
+      title: {
+        en: 'Working with Glimpses',
+        sv: 'Arbeta med glimtar'
+      },
+      description: {
+        en: 'Integration practices after moments of recognition',
+        sv: 'Integrationspraktiker efter ögonblick av igenkänning'
+      }
+    },
+
+    // Placeholder for future sections
     {
       id: 'section3-intro',
       path: 'section-3-the-living',

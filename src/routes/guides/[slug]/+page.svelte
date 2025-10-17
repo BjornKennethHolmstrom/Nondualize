@@ -179,9 +179,16 @@
               <ul class="space-y-2 border-l border-slate-200 dark:border-slate-700 pl-4">
                 {#each section2Items as item}
                   <li>
-                    <span class="block py-1 text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed">
-                      {item.title[currentLanguage]}
-                    </span>
+                    <a 
+                      href="{base}/guides/{item.path}"
+                      class="block py-1 text-sm hover:text-slate-900 dark:hover:text-slate-100 transition-colors {item.path === slug ? 'font-semibold text-slate-900 dark:text-slate-100 border-l-2 border-slate-900 dark:border-slate-100 -ml-[17px] pl-[15px]' : 'text-slate-600 dark:text-slate-400'}"
+                    >
+                      {#if item.type === 'article'}
+                        {item.number}. {item.title[currentLanguage]}
+                      {:else}
+                        {item.title[currentLanguage]}
+                      {/if}
+                    </a>
                   </li>
                 {/each}
               </ul>

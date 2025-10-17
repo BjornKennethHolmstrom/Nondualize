@@ -222,6 +222,13 @@
               >
                 {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
               </a>
+            {:else if section.id === 'the-pointer'}
+              <a 
+                href="{base}/guides/section-2-the-pointer"
+                class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-md text-sm transition-colors"
+              >
+                {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
+              </a>
             {:else}
               <span class="inline-block px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md text-sm">
                 {pageTranslations.comingSoon}
