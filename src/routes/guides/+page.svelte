@@ -243,8 +243,8 @@
     <div class="mt-16 text-center">
       <p class="text-slate-500 dark:text-slate-400 italic">
         {currentLanguage === 'en' 
-          ? 'Content is being developed progressively. Check back soon for the first sections.' 
-          : 'Innehåll utvecklas progressivt. Kom tillbaka snart för de första sektionerna.'}
+          ? 'Content is being developed progressively. Check back soon for the last sections.' 
+          : 'Innehåll utvecklas progressivt. Kom tillbaka snart för de sista sektionerna.'}
       </p>
     </div>
   </div>
