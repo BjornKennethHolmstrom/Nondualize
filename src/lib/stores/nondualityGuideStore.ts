@@ -280,7 +280,7 @@ const initialState: NondualityGuideStore = {
       }
     },
 
-    // Placeholder for future sections
+    // Section 3: The Living
     {
       id: 'section3-intro',
       path: 'section-3-the-living',
@@ -295,6 +295,113 @@ const initialState: NondualityGuideStore = {
         sv: 'Integration i vardagen'
       }
     },
+    {
+      id: 'article3-1',
+      path: 'nonduality-in-relationships',
+      type: 'article',
+      section: 3,
+      number: 1,
+      title: {
+        en: 'Non-Duality in Relationships',
+        sv: 'Icke-dualitet i relationer'
+      },
+      description: {
+        en: 'When "the other" isn\'t ultimately other',
+        sv: 'När "den andra" inte i grunden är en annan'
+      }
+    },
+    {
+      id: 'article3-2',
+      path: 'nonduality-and-emotions',
+      type: 'article',
+      section: 3,
+      number: 2,
+      title: {
+        en: 'Non-Duality and Emotions',
+        sv: 'Icke-dualitet och känslor'
+      },
+      description: {
+        en: 'Feeling fully without identifying',
+        sv: 'Känna fullt ut utan att identifiera sig'
+      }
+    },
+    {
+      id: 'article3-3',
+      path: 'nonduality-at-work',
+      type: 'article',
+      section: 3,
+      number: 3,
+      title: {
+        en: 'Non-Duality at Work',
+        sv: 'Icke-dualitet på arbetet'
+      },
+      description: {
+        en: 'Being present in professional life',
+        sv: 'Vara närvarande i yrkeslivet'
+      }
+    },
+    {
+      id: 'article3-4',
+      path: 'nonduality-and-suffering',
+      type: 'article',
+      section: 3,
+      number: 4,
+      title: {
+        en: 'Non-Duality and Suffering',
+        sv: 'Icke-dualitet och lidande'
+      },
+      description: {
+        en: 'Pain vs suffering: what changes with recognition',
+        sv: 'Smärta vs lidande: vad förändras med igenkänning'
+      }
+    },
+    {
+      id: 'article3-5',
+      path: 'nonduality-and-action',
+      type: 'article',
+      section: 3,
+      number: 5,
+      title: {
+        en: 'Non-Duality and Action',
+        sv: 'Icke-dualitet och handling'
+      },
+      description: {
+        en: 'Wu wei: action from non-action',
+        sv: 'Wu wei: handling från icke-handling'
+      }
+    },
+    {
+      id: 'article3-6',
+      path: 'nonduality-different-stages',
+      type: 'article',
+      section: 3,
+      number: 6,
+      title: {
+        en: 'Non-Duality at Different Stages',
+        sv: 'Icke-dualitet på olika stadier'
+      },
+      description: {
+        en: 'How recognition expresses at each developmental stage',
+        sv: 'Hur igenkänning uttrycker sig på varje utvecklingsstadium'
+      }
+    },
+    {
+      id: 'article3-7',
+      path: 'daily-life-as-practice',
+      type: 'article',
+      section: 3,
+      number: 7,
+      title: {
+        en: 'Daily Life as Practice',
+        sv: 'Vardagen som praktik'
+      },
+      description: {
+        en: 'Chopping wood, carrying water',
+        sv: 'Hugga ved, bära vatten'
+      }
+    },
+
+    // Placeholder for future sections
     {
       id: 'section4-intro',
       path: 'section-4-the-meta',
