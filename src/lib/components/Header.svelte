@@ -27,6 +27,9 @@
         <a href="{base}/guides" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
           {$t.nav.guides}
         </a>
+        <a href="{base}/contact" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+          {$t.nav.contact}
+        </a>
         <a href="{base}/about" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
           {$t.nav.about}
         </a>
