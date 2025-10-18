@@ -401,7 +401,7 @@ const initialState: NondualityGuideStore = {
       }
     },
 
-    // Placeholder for future sections
+    // Section 4: The Meta
     {
       id: 'section4-intro',
       path: 'section-4-the-meta',
@@ -416,6 +416,114 @@ const initialState: NondualityGuideStore = {
         sv: 'Reflektion över resan'
       }
     },
+    {
+      id: 'article4-1',
+      path: 'paradox-of-this-website',
+      type: 'article',
+      section: 4,
+      number: 1,
+      title: {
+        en: 'The Paradox of This Website',
+        sv: 'Paradoxen med denna webbplats'
+      },
+      description: {
+        en: 'Using concepts to point beyond concepts',
+        sv: 'Använda koncept för att peka bortom koncept'
+      }
+    },
+    {
+      id: 'article4-2',
+      path: 'maps-and-territory',
+      type: 'article',
+      section: 4,
+      number: 2,
+      title: {
+        en: 'Maps and Territory',
+        sv: 'Kartor och territorium'
+      },
+      description: {
+        en: 'The value and danger of frameworks',
+        sv: 'Värdet och faran med ramverk'
+      }
+    },
+    {
+      id: 'article4-3',
+      path: 'development-awakening-deeper',
+      type: 'article',
+      section: 4,
+      number: 3,
+      title: {
+        en: 'Development and Awakening: A Deeper Look',
+        sv: 'Utveckling och uppvaknande: En djupare titt'
+      },
+      description: {
+        en: 'Revisiting the relationship between dimensions',
+        sv: 'Återbesöka relationen mellan dimensioner'
+      }
+    },
+    {
+      id: 'article4-4',
+      path: 'when-language-fails',
+      type: 'article',
+      section: 4,
+      number: 4,
+      title: {
+        en: 'When Language Fails',
+        sv: 'När språket misslyckas'
+      },
+      description: {
+        en: 'The limits of words and concepts',
+        sv: 'Ordens och konceptens begränsningar'
+      }
+    },
+    {
+      id: 'article4-5',
+      path: 'personal-journey-humility',
+      type: 'article',
+      section: 4,
+      number: 5,
+      title: {
+        en: 'Personal Journey and Humility',
+        sv: 'Personlig resa och ödmjukhet'
+      },
+      description: {
+        en: 'The creator\'s own position and ongoing learning',
+        sv: 'Skaparens egen position och pågående lärande'
+      }
+    },
+    {
+      id: 'article4-6',
+      path: 'community-and-dialogue',
+      type: 'article',
+      section: 4,
+      number: 6,
+      title: {
+        en: 'Community and Dialogue',
+        sv: 'Gemenskap och dialog'
+      },
+      description: {
+        en: 'Learning together rather than alone',
+        sv: 'Lära tillsammans snarare än ensam'
+      }
+    },
+    {
+      id: 'article4-7',
+      path: 'what-remains-mysterious',
+      type: 'article',
+      section: 4,
+      number: 7,
+      title: {
+        en: 'What Remains Mysterious',
+        sv: 'Vad som förblir mystiskt'
+      },
+      description: {
+        en: 'Questions without answers, closing without closure',
+        sv: 'Frågor utan svar, avslutning utan slutsats'
+      }
+    },
+
+    // Placeholder for future sections
+
   ],
   currentItem: null,
   translations: {

@@ -40,7 +40,7 @@
 
     <div class="mt-12 text-center">
       <p class="text-sm text-slate-500 dark:text-slate-400 italic">
-        {$t.home.comingSoon}
+        {$t.home.sectionsComplete}
       </p>
     </div>
   </div>

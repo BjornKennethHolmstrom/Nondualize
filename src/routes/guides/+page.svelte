@@ -236,6 +236,13 @@
               >
                 {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
               </a>
+            {:else if section.id === 'the-meta'}
+              <a 
+                href="{base}/guides/section-4-the-meta"
+                class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-md text-sm transition-colors"
+              >
+                {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
+              </a>
             {:else}
               <span class="inline-block px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md text-sm">
                 {pageTranslations.comingSoon}
@@ -250,8 +257,8 @@
     <div class="mt-16 text-center">
       <p class="text-slate-500 dark:text-slate-400 italic">
         {currentLanguage === 'en' 
-          ? 'Content is being developed progressively. Check back soon for the last sections.' 
-          : 'Innehåll utvecklas progressivt. Kom tillbaka snart för de sista sektionerna.'}
+          ? 'A potential fifth section, "The Ground," may explore the non-dual nature of fundamental conceptual dualities: time, existence, causality, and the collapse of seeking itself.' 
+          : 'En potentiell femte sektion, "Grunden", kan utforska den icke-duala naturen hos grundläggande konceptuella dualiteter: tid, existens, kausalitet och kollapsen av att söka sig själv.'}
       </p>
     </div>
   </div>
