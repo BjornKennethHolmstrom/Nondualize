@@ -15,6 +15,7 @@
     getItemByPath
   } from '$lib/stores/nondualityGuideStore';
   import { afterNavigate } from '$app/navigation';
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
 
   // Import all markdown files at build time
   const enModules = import.meta.glob('../../../content/guides/nonduality/en/*.md');
@@ -271,6 +272,12 @@
             <div class="prose-custom">
               <svelte:component this={ContentComponent} />
             </div>
+            
+            <!-- Share Buttons -->
+            <ShareButtons 
+              title={itemTitle}
+              description={currentItem?.description || ''}
+            />
           {:else}
             <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-lg text-center">
               <p class="text-lg text-slate-600 dark:text-slate-400 mb-4">{t.comingSoon}</p>
@@ -331,4 +338,3 @@
     </div>
   {/if}
 </div>
-

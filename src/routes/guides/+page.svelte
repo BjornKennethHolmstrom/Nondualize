@@ -3,6 +3,7 @@
   import { fade } from 'svelte/transition';
   import { language } from '$lib/stores/languageStore';
   import { base } from '$app/paths';
+  import ShareButtons from '$lib/components/ShareButtons.svelte';
 
   $: currentLanguage = $language;
 
@@ -154,6 +155,10 @@
   $: description = currentLanguage === 'en'
     ? 'Explore non-dual awareness through intellectual frameworks, direct pointers, and practical integration.'
     : 'Utforska icke-dual medvetenhet genom intellektuella ramverk, direkta pekare och praktisk integration.';
+
+  $: pageTitle = currentLanguage === 'en'
+    ? 'Explore Non-Duality - Nondualize Guides'
+    : 'Utforska Icke-dualitet - Nondualize Guider';
 </script>
 
 <svelte:head>
@@ -262,4 +267,8 @@
       </p>
     </div>
   </div>
+</div>
+
+<div class="mt-16">
+  <ShareButtons title={pageTitle} />
 </div>
