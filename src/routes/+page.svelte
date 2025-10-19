@@ -3,7 +3,25 @@
   import { fade } from 'svelte/transition';
   import { t } from '$lib/stores/languageStore';
   import { base } from '$app/paths';
+  import SEO from '$lib/components/SEO.svelte';
+  
+  $: currentLanguage = globalThis.language;
+  
+  $: seoTitle = currentLanguage === 'en'
+    ? 'Nondualize - Exploring Non-Dual Awareness'
+    : 'Nondualize - Utforska Icke-dual Medvetenhet';
+    
+  $: seoDescription = currentLanguage === 'en'
+    ? 'Free, open resource for exploring non-dual awareness through intellectual frameworks, direct pointers, and practical integration. Bridges understanding with recognition.'
+    : 'Gratis, öppen resurs för att utforska icke-dual medvetenhet genom intellektuella ramverk, direkta pekare och praktisk integration.';
 </script>
+
+<SEO 
+  title={seoTitle}
+  description={seoDescription}
+  keywords="non-duality, non-dual awareness, advaita, zen, consciousness, awakening, spiritual development"
+  type="website"
+/>
 
 <svelte:head>
   <title>{$t.home.title} | {$t.home.subtitle}</title>

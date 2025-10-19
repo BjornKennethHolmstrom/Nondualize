@@ -2,6 +2,7 @@
   import { fade } from 'svelte/transition';
   import { language } from '$lib/stores/languageStore';
   import { base } from '$app/paths';
+  import SEO from '$lib/components/SEO.svelte';
 
   $: currentLanguage = $language;
 
@@ -79,7 +80,22 @@
   $: description = currentLanguage === 'en'
     ? 'Learn about Nondualize, a free resource bridging intellectual understanding and direct recognition of non-dual awareness.'
     : 'Lär dig om Nondualize, en gratis resurs som överbryggar intellektuell förståelse och direkt igenkänning av icke-dual medvetenhet.';
+
+  $: seoTitle = currentLanguage === 'en'
+    ? 'About Nondualize'
+    : 'Om Nondualize';
+    
+  $: seoDescription = currentLanguage === 'en'
+    ? 'Learn about Nondualize, a free resource bridging intellectual understanding and direct recognition of non-dual awareness. Sister site to Spiralize.org.'
+    : 'Lär dig om Nondualize, en gratis resurs som överbryggar intellektuell förståelse och direkt igenkänning av icke-dual medvetenhet.';
 </script>
+
+<SEO 
+  title={seoTitle}
+  description={seoDescription}
+  keywords="about nondualize, non-duality education, consciousness resources, Björn Kenneth Holmström"
+  type="website"
+/>
 
 <svelte:head>
   <title>{title}</title>

@@ -16,6 +16,7 @@
   } from '$lib/stores/nondualityGuideStore';
   import { afterNavigate } from '$app/navigation';
   import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import SEO from '$lib/components/SEO.svelte';
 
   // Import all markdown files at build time
   const enModules = import.meta.glob('../../../content/guides/nonduality/en/*.md');
@@ -130,7 +131,26 @@
       isLoading = false;
     }
   }
+
+  // Generate SEO description from current item
+  $: seoDescription = currentItem 
+    ? (currentLanguage === 'en' 
+        ? `Explore ${currentItem.title.en} - Part of the comprehensive guide to non-dual awareness.`
+        : `Utforska ${currentItem.title.sv} - Del av den omfattande guiden till icke-dual medvetenhet.`)
+    : '';
+    
+  $: keywords = currentItem?.type === 'article'
+    ? 'non-duality, non-dual awareness, ' + currentItem.title.en.toLowerCase()
+    : 'non-duality, consciousness, awakening';
 </script>
+
+<SEO 
+  title={itemTitle}
+  description={seoDescription}
+  keywords={keywords}
+  type="article"
+  section={currentItem ? t.sections[currentItem.section] : ''}
+/>
 
 <svelte:head>
   <title>{itemTitle} | Nondualize</title>

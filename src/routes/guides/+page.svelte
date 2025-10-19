@@ -4,6 +4,7 @@
   import { language } from '$lib/stores/languageStore';
   import { base } from '$app/paths';
   import ShareButtons from '$lib/components/ShareButtons.svelte';
+  import SEO from '$lib/components/SEO.svelte';
 
   $: currentLanguage = $language;
 
@@ -159,7 +160,22 @@
   $: pageTitle = currentLanguage === 'en'
     ? 'Explore Non-Duality - Nondualize Guides'
     : 'Utforska Icke-dualitet - Nondualize Guider';
+
+  $: seoTitle = currentLanguage === 'en'
+    ? 'Non-Duality Guides'
+    : 'Icke-dualitet Guider';
+    
+  $: seoDescription = currentLanguage === 'en'
+    ? 'Comprehensive guides to non-dual awareness: The Map (understanding), The Pointer (recognition), The Living (integration), and The Meta (reflection).'
+    : 'Omfattande guider till icke-dual medvetenhet: Kartan (förståelse), Pekaren (igenkänning), Levandet (integration) och Meta (reflektion).';
 </script>
+
+<SEO 
+  title={seoTitle}
+  description={seoDescription}
+  keywords="non-duality guide, awakening path, consciousness development, spiritual integration, advaita vedanta, zen practice"
+  type="website"
+/>
 
 <svelte:head>
   <title>{title}</title>

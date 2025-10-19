@@ -2,6 +2,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import { language } from '$lib/stores/languageStore';
+  import SEO from '$lib/components/SEO.svelte';
 
   $: currentLanguage = $language;
 
@@ -94,7 +95,21 @@
   $: description = currentLanguage === 'en'
     ? 'Get in touch with questions, reflections, or feedback about non-dual awareness.'
     : 'Kontakta oss med frågor, reflektioner eller feedback om icke-dual medvetenhet.';
+
+  $: seoTitle = currentLanguage === 'en'
+    ? 'Contact Nondualize'
+    : 'Kontakta Nondualize';
+    
+  $: seoDescription = currentLanguage === 'en'
+    ? 'Get in touch with questions, reflections, or feedback about non-dual awareness and consciousness exploration.'
+    : 'Kontakta oss med frågor, reflektioner eller feedback om icke-dual medvetenhet och medvetandeutforskning.';
 </script>
+
+<SEO 
+  title={seoTitle}
+  description={seoDescription}
+  type="website"
+/>
 
 <svelte:head>
   <title>{title}</title>
