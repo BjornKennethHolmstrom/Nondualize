@@ -17,6 +17,8 @@
   import { afterNavigate } from '$app/navigation';
   import ShareButtons from '$lib/components/ShareButtons.svelte';
   import SEO from '$lib/components/SEO.svelte';
+  import ArticleStructuredData from '$lib/components/ArticleStructuredData.svelte';
+  import { getArticlePublishDate } from '$lib/config/articleDates';
 
   // Import all markdown files at build time
   const enModules = import.meta.glob('../../../content/guides/nonduality/en/*.md');
@@ -140,21 +142,37 @@
     : '';
     
   $: keywords = currentItem?.type === 'article'
-    ? 'non-duality, non-dual awareness, ' + currentItem.title.en.toLowerCase()
-    : 'non-duality, consciousness, awakening';
+      ? ['non-duality', 'non-dual awareness', 'consciousness', 'awakening', currentItem.title.en.toLowerCase()]
+      : ['non-duality', 'consciousness', 'awakening'];
 </script>
-
-<SEO 
-  title={itemTitle}
-  description={seoDescription}
-  keywords={keywords}
-  type="article"
-  section={currentItem ? t.sections[currentItem.section] : ''}
-/>
 
 <svelte:head>
   <title>{itemTitle} | Nondualize</title>
 </svelte:head>
+
+<!-- SEO Component -->
+{#if currentItem}
+  <SEO 
+    title={itemTitle}
+    description={seoDescription}
+    keywords={keywords.join(', ')}
+    type="article"
+    section={t.sections[currentItem.section] || ''}
+  />
+  
+  <!-- Structured Data for Articles -->
+  {#if currentItem.type === 'article'}
+    <ArticleStructuredData
+      title={itemTitle}
+      description={seoDescription}
+      section={t.sections[currentItem.section] || ''}
+      articleNumber={currentItem.number}
+      keywords={keywords}
+      publishedDate={getArticlePublishDate(currentItem.path)}
+      modifiedDate={new Date().toISOString()}
+    />
+  {/if}
+{/if}
 
 <div class="max-w-7xl mx-auto px-4 py-12">
   {#if isLoading}
