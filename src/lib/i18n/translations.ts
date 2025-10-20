@@ -42,7 +42,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Exploring Non-Dual Awareness',
       intro: 'A space for exploring non-duality—the recognition that the apparent separation between self and other, observer and observed, is not ultimately real.',
       description: 'This site offers both intellectual frameworks and direct pointers, honoring the mind\'s need to understand while inviting recognition of what lies beyond concepts.',
-      sectionsComplete: 'Sections 1-4 are now complete, exploring the map, the pointer, the living, and the meta-dimensions of non-dual awareness.'
+      sectionsComplete: 'All five sections complete: The Map, The Pointer, The Living, The Meta, and The Ground—exploring non-dual awareness from multiple dimensions.'
     },
       guides: {
       theMap: 'The Map: Intellectual Foundations',
@@ -70,7 +70,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Utforska icke-dual medvetenhet',
       intro: 'Ett utrymme för att utforska icke-dualitet—insikten att den uppenbara separationen mellan själv och andra, observatör och observerat, inte är ultimat verklig.',
       description: 'Denna webbplats erbjuder både intellektuella ramverk och direkta pekare, hedrar sinnet behov av att förstå samtidigt som den bjuder in till igenkänning av det som ligger bortom koncept.',
-      sectionsComplete: 'Avsnitt 1-4 är nu färdiga och utforskar kartan, pekaren, det levande och metadimensionerna av icke-dual medvetenhet.'
+      sectionsComplete: 'Alla fem sektioner är nu färdiga: Kartan, Pekaren, Levandet, Meta och Grunden—utforska icke-dual medvetenhet från flera dimensioner.'
     },
     guides: {
       theMap: 'Kartan: Intellektuella grunder',
