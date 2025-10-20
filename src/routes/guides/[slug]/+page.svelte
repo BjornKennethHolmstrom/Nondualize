@@ -12,6 +12,7 @@
     getSection2Items,
     getSection3Items,
     getSection4Items,
+    getSection5Items,
     getItemByPath
   } from '$lib/stores/nondualityGuideStore';
   import { afterNavigate } from '$app/navigation';
@@ -43,6 +44,7 @@
   const section2Items = getSection2Items();
   const section3Items = getSection3Items();
   const section4Items = getSection4Items();
+  const section5Items = getSection5Items();
 
   // Get slug from page params
   $: slug = $page.params.slug;
@@ -272,6 +274,29 @@
               </h4>
               <ul class="space-y-2 border-l border-slate-200 dark:border-slate-700 pl-4">
                 {#each section4Items as item}
+                  <li>
+                    <a 
+                      href="{base}/guides/{item.path}"
+                      class="block py-1 text-sm hover:text-slate-900 dark:hover:text-slate-100 transition-colors {item.path === slug ? 'font-semibold text-slate-900 dark:text-slate-100 border-l-2 border-slate-900 dark:border-slate-100 -ml-[17px] pl-[15px]' : 'text-slate-600 dark:text-slate-400'}"
+                    >
+                      {#if item.type === 'article'}
+                        {item.number}. {item.title[currentLanguage]}
+                      {:else}
+                        {item.title[currentLanguage]}
+                      {/if}
+                    </a>
+                  </li>
+                {/each}
+              </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="mt-6">
+              <h4 class="text-sm uppercase text-slate-500 dark:text-slate-400 font-medium mb-2">
+                {t.sections[5]}
+              </h4>
+              <ul class="space-y-2 border-l border-slate-200 dark:border-slate-700 pl-4">
+                {#each section5Items as item}
                   <li>
                     <a 
                       href="{base}/guides/{item.path}"

@@ -74,6 +74,23 @@
           ],
           color: "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800",
           icon: "🔄"
+        },
+        {
+          id: "the-ground",
+          title: "Section 5: The Ground",
+          subtitle: "Exploring Reality's Fundamental Constructs",
+          description: "The deepest layer: examining the basic conceptual structures through which we perceive reality. Time and timelessness, space and boundlessness, being and nothingness, causality, seeking, and meaning itself.",
+          topics: [
+            "Time: The eternal now",
+            "Space: The boundless here",
+            "The self-other divide: The primary illusion",
+            "Being and nothingness: Two sides of isness",
+            "Cause and effect: The unbroken wholeness",
+            "The end of seeking",
+            "Living without a why: Meaning and meaninglessness"
+          ],
+          color: "bg-slate-50 dark:bg-slate-900/20 border-slate-200 dark:border-slate-800",
+          icon: "🌌"
         }
       ]
     },
@@ -142,6 +159,23 @@
           ],
           color: "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800",
           icon: "🔄"
+        },
+        {
+          id: "the-ground",
+          title: "Sektion 5: Grunden",
+          subtitle: "Utforska Verklighetens Grundläggande Konstruktioner",
+          description: "Det djupaste lagret: undersöka de grundläggande konceptuella strukturerna genom vilka vi uppfattar verkligheten. Tid och tidlöshet, rum och gränslöshet, varande och intighet, kausalitet, sökande och mening själv.",
+          topics: [
+            "Tid: Det eviga nuet",
+            "Rum: Det gränslösa här",
+            "Uppdelningen mellan själv och andra: Den primära illusionen",
+            "Varande och intighet: Två sidor av existens",
+            "Orsak och verkan: Den obrytbara helheten",
+            "Slutet på sökandet",
+            "Leva utan ett varför: Mening och meningslöshet"
+          ],
+          color: "bg-slate-50 dark:bg-slate-900/20 border-slate-200 dark:border-slate-800",
+          icon: "🌌"
         }
       ]
     }
@@ -166,14 +200,14 @@
     : 'Icke-dualitet Guider';
     
   $: seoDescription = currentLanguage === 'en'
-    ? 'Comprehensive guides to non-dual awareness: The Map (understanding), The Pointer (recognition), The Living (integration), and The Meta (reflection).'
-    : 'Omfattande guider till icke-dual medvetenhet: Kartan (förståelse), Pekaren (igenkänning), Levandet (integration) och Meta (reflektion).';
+    ? 'Comprehensive guides to non-dual awareness: The Map, The Pointer, The Living, The Meta, and The Ground - exploring fundamental structures of reality.'
+    : 'Omfattande guider till icke-dual medvetenhet: Kartan, Pekaren, Levandet, Meta och Grunden - utforska verklighetens grundläggande strukturer.';
 </script>
 
 <SEO 
   title={seoTitle}
   description={seoDescription}
-  keywords="non-duality guide, awakening path, consciousness development, spiritual integration, advaita vedanta, zen practice"
+  keywords="non-duality guide, awakening path, consciousness development, spiritual integration, advaita vedanta, zen practice, fundamental reality"
   type="website"
 />
 
@@ -264,6 +298,13 @@
               >
                 {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
               </a>
+            {:else if section.id === 'the-ground'}
+              <a 
+                href="{base}/guides/section-5-the-ground"
+                class="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-md text-sm transition-colors"
+              >
+                {currentLanguage === 'en' ? 'Start Reading →' : 'Börja Läsa →'}
+              </a>
             {:else}
               <span class="inline-block px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-md text-sm">
                 {pageTranslations.comingSoon}
@@ -272,15 +313,6 @@
           </div>
         </div>
       {/each}
-    </div>
-
-    <!-- Footer note -->
-    <div class="mt-16 text-center">
-      <p class="text-slate-500 dark:text-slate-400 italic">
-        {currentLanguage === 'en' 
-          ? 'A potential fifth section, "The Ground," may explore the non-dual nature of fundamental conceptual dualities: time, existence, causality, and the collapse of seeking itself.' 
-          : 'En potentiell femte sektion, "Grunden", kan utforska den icke-duala naturen hos grundläggande konceptuella dualiteter: tid, existens, kausalitet och kollapsen av att söka sig själv.'}
-      </p>
     </div>
   </div>
 </div>

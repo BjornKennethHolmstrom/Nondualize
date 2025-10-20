@@ -5,7 +5,7 @@ interface GuideItem {
   id: string;
   path: string;
   type: 'section-intro' | 'article';
-  section: 1 | 2 | 3 | 4;
+  section: 1 | 2 | 3 | 4 | 5;
   number?: number; // For articles within sections
   title: Record<string, string>;
   description?: Record<string, string>;
@@ -522,6 +522,127 @@ const initialState: NondualityGuideStore = {
       }
     },
 
+    // Section 5: The Ground
+    {
+      id: 'section5-intro',
+      path: 'section-5-the-ground',
+      type: 'section-intro',
+      section: 5,
+      title: {
+        en: 'Section 5: The Ground',
+        sv: 'Sektion 5: Grunden'
+      },
+      description: {
+        en: 'Exploring the non-dual nature of reality\'s most fundamental constructs',
+        sv: 'Utforska den icke-duala naturen hos verklighetens mest grundläggande konstruktioner'
+      }
+    },
+    {
+      id: 'article5-1',
+      path: 'time-eternal-now',
+      type: 'article',
+      section: 5,
+      number: 1,
+      title: {
+        en: 'Time: The Eternal Now',
+        sv: 'Tid: Det eviga nuet'
+      },
+      description: {
+        en: 'Past and future as concepts appearing in the timeless present',
+        sv: 'Dåtid och framtid som koncept som uppträder i den tidlösa nutiden'
+      }
+    },
+    {
+      id: 'article5-2',
+      path: 'space-boundless-here',
+      type: 'article',
+      section: 5,
+      number: 2,
+      title: {
+        en: 'Space: The Boundless Here',
+        sv: 'Rum: Det gränslösa här'
+      },
+      description: {
+        en: 'Where exactly are the boundaries of "here" and "there"?',
+        sv: 'Var exakt är gränserna mellan "här" och "där"?'
+      }
+    },
+    {
+      id: 'article5-3',
+      path: 'self-other-primary-illusion',
+      type: 'article',
+      section: 5,
+      number: 3,
+      title: {
+        en: 'The Self-Other Divide: The Primary Illusion',
+        sv: 'Uppdelningen mellan själv och andra: Den primära illusionen'
+      },
+      description: {
+        en: 'Subject and object as two sides of one experiencing',
+        sv: 'Subjekt och objekt som två sidor av ett upplevande'
+      }
+    },
+    {
+      id: 'article5-4',
+      path: 'being-and-nothingness',
+      type: 'article',
+      section: 5,
+      number: 4,
+      title: {
+        en: 'Being and Nothingness: The Two Sides of Isness',
+        sv: 'Varande och intighet: De två sidorna av varandet'
+      },
+      description: {
+        en: 'Existence and non-existence arising together',
+        sv: 'Existens och icke-existens uppstår tillsammans'
+      }
+    },
+    {
+      id: 'article5-5',
+      path: 'cause-and-effect-unbroken-wholeness',
+      type: 'article',
+      section: 5,
+      number: 5,
+      title: {
+        en: 'Cause and Effect: The Unbroken Wholeness',
+        sv: 'Orsak och verkan: Den obrytbara helheten'
+      },
+      description: {
+        en: 'Linear causality as abstraction from unified field',
+        sv: 'Linjär kausalitet som abstraktion från enhetligt fält'
+      }
+    },
+    {
+      id: 'article5-6',
+      path: 'end-of-seeking',
+      type: 'article',
+      section: 5,
+      number: 6,
+      title: {
+        en: 'The End of Seeking: When the Problem-Solution Loop Collapses',
+        sv: 'Slutet på sökandet: När problem-lösning-loopen kollapsar'
+      },
+      description: {
+        en: 'The seeker is what\'s being sought',
+        sv: 'Sökaren är det som söks'
+      }
+    },
+    {
+      id: 'article5-7',
+      path: 'living-without-why',
+      type: 'article',
+      section: 5,
+      number: 7,
+      title: {
+        en: 'Living Without a Why: Meaning and Meaninglessness',
+        sv: 'Leva utan ett varför: Mening och meningslöshet'
+      },
+      description: {
+        en: 'Reality prior to the need for meaning',
+        sv: 'Verklighet före behovet av mening'
+      }
+    },
+
     // Placeholder for future sections
 
   ],
@@ -532,7 +653,8 @@ const initialState: NondualityGuideStore = {
         1: 'Section 1: The Map',
         2: 'Section 2: The Pointer',
         3: 'Section 3: The Living',
-        4: 'Section 4: The Meta'
+        4: 'Section 4: The Meta',
+        5: 'Section 5: The Ground'
       },
       article: 'Article',
       previous: 'Previous',
@@ -547,7 +669,8 @@ const initialState: NondualityGuideStore = {
         1: 'Sektion 1: Kartan',
         2: 'Sektion 2: Pekaren',
         3: 'Sektion 3: Levandet',
-        4: 'Sektion 4: Meta'
+        4: 'Sektion 4: Meta',
+        5: 'Sektion 5: Grunden'
       },
       article: 'Artikel',
       previous: 'Föregående',
@@ -594,6 +717,11 @@ function getSection4Items() {
   return getSectionItems(4);
 }
 
+function getSection5Items() {
+  return getSectionItems(5);
+}
+
+
 function getAllNavigableItems() {
   const store = get();
   return store.items.filter(item => item.type === 'section-intro' || item.type === 'article');
@@ -628,6 +756,7 @@ export {
   getSection2Items,
   getSection3Items,
   getSection4Items,
+  getSection5Items,
   getAllNavigableItems,
   getItemByPath,
   setCurrentItem,
