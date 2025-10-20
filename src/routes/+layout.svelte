@@ -2,6 +2,7 @@
 <script lang="ts">
   import '../app.css';
   import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import { theme } from '$lib/stores/themeStore';
   import { browser } from '$app/environment';
   
@@ -20,4 +21,5 @@
   <main>
     <slot />
   </main>
+  <Footer />
 </div>
