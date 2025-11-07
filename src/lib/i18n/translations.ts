@@ -35,7 +35,8 @@ export const translations: Record<Language, Translations> = {
       home: 'Home',
       guides: 'Guides',
       about: 'About',
-      contact: 'Contact'
+      contact: 'Contact',
+      support: 'Support',
     },
     home: {
       title: 'Nondualize',
@@ -63,7 +64,8 @@ export const translations: Record<Language, Translations> = {
       home: 'Hem',
       guides: 'Guider',
       about: 'Om',
-      contact: 'Kontakt'
+      contact: 'Kontakt',
+      support: 'Stöd',
     },
     home: {
       title: 'Nondualize',

@@ -33,6 +33,9 @@
         <a href="{base}/about" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
           {$t.nav.about}
         </a>
+        <a href="{base}/support" class="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors">
+          {$t.nav.support}
+        </a>
         
         <!-- Language Toggle -->
         <button

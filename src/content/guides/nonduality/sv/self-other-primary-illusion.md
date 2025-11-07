@@ -204,15 +204,15 @@ Detta direkta engagemang gäller allt – arbete, konst, relationer, även svår
 
 ### Medkänsla utan ansträngning
 
-När gränsen mellan jag och andra ses som konstruerad snarare än absolut, blir medkänsla naturlig snarare än ansträngande.
+När den konceptuella gränsen mellan "jaget" och "den andra" ses som en användbar konstruktion snarare än en absolut vägg, kan medkänsla flöda mer naturligt.
 
-Vanligtvis kräver medkänsla att man sträcker sig bortom sina gränser för att bry sig om någon annans lidande. Det finns fortfarande grundläggande separation – du är här, de är där, och du anstränger dig för att överbrygga klyftan.
+Vanligtvis agerar vi utifrån en känsla av grundläggande separation: "Jag är här, trygg i min bubbla, och jag ger dig omsorg där borta i din smärta."
 
-När separationen genomskådas, känns deras lidande igen som lidande som uppstår i samma fält som din upplevelse uppstår i. Inte "deras lidande" kontra "ditt välbefinnande" – bara lidande som uppstår i medvetenhet som inkluderar båda uppenbara positionerna.
+När soliditeten i det separata jag-konstruktionen mjuknar, förlorar du inte sunda interpersonella gränser, men du kan känna en annans lidande inte som ett avlägset problem, utan som en resonant kvalitet av vår gemensamma mänskliga erfarenhet inom ett enda, sammankopplat medvetenhetsfält.
 
-Medkänsla blir respons på det som faktiskt finns här snarare än en moralisk skyldighet att bry sig om det som är separat. Inte påtvingad, inte ansträngande, utan ett naturligt uttryck för att känna igen icke-separation.
+Detta raderar inte deras unika personlighet eller din egen; istället möjliggör det en respons som känns mindre som ett projekt av "jag hjälper dig" och mer som en naturlig rörelse av omsorg inom helheten.
 
-Detta betyder inte att du tar på dig allas lidande eller förlorar gränser. Det betyder att motivationen att lindra lidande inte kommer från "Jag borde bry mig om andra" – den kommer från direkt igenkänning att de uppenbara andras lidande är helhetens lidande.
+Deras lidande förblir deras levda verklighet som du relaterar till med respekt; ditt ansvar är att svara med tydlighet och medkänsla, inte att absorbera eller äga deras smärta.
 
 ### Frihet från jämförelse
 
