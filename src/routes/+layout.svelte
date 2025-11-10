@@ -19,7 +19,7 @@
       // Register service worker for PWA functionality
       if ('serviceWorker' in navigator) {
         try {
-          const registration = await navigator.serviceWorker.register('./service-worker.js');
+          const registration = await navigator.serviceWorker.register('/service-worker.js');
           console.log('Service Worker registered successfully:', registration.scope);
         } catch (error) {
           console.log('Service Worker registration failed:', error);
@@ -34,20 +34,20 @@
   <meta name="description" content="Free, open-source educational resource for exploring non-dual awareness and consciousness" />
   
   <!-- PWA Meta Tags -->
-  <link rel="manifest" href="./manifest.json" />
+  <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#475569" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Nondualize" />
   
   <!-- Additional favicon sizes -->
-  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
-  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   
   <!-- Microsoft Tiles -->
   <meta name="msapplication-TileColor" content="#475569" />
-  <meta name="msapplication-TileImage" content="./icons/ms-tile-144.png" />
+  <meta name="msapplication-TileImage" content="/icons/ms-tile-144.png" />
   
   <!-- Open Graph -->
   <meta property="og:type" content="website" />

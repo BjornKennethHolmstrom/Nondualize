@@ -1,13 +1,12 @@
 const CACHE_NAME = 'nondualize-v1';
-const OFFLINE_URL = './offline.html';
+const OFFLINE_URL = '/offline.html';
 
 // Files to cache for offline functionality
 const CORE_CACHE_FILES = [
-  './',
-  './offline.html',
-  './app.css',
-  './favicon.png',
-  './logo.svg'
+  '/',
+  '/offline.html',
+  '/app.css',
+  '/favicon.png'
 ];
 
 // Install event - cache core files
@@ -74,7 +73,6 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          console.log('Service Worker: Serving from cache', event.request.url);
           return response;
         }
         
@@ -95,7 +93,6 @@ self.addEventListener('fetch', event => {
           });
       })
       .catch(() => {
-        console.log('Service Worker: Request failed', event.request.url);
         // Return offline page for failed navigation requests
         if (event.request.destination === 'document') {
           return caches.match(OFFLINE_URL);
