@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Nondualize</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            color: #334155;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .offline-content {
+            max-width: 400px;
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #475569;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #64748b;
+        }
+        .retry-btn {
+            background: #475569;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        .retry-btn:hover {
+            background: #334155;
+            transform: translateY(-1px);
+        }
+        .zen-quote {
+            font-style: italic;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0f172a;
+                color: #e2e8f0;
+            }
+            .offline-content {
+                background: #1e293b;
+            }
+            h1 {
+                color: #f1f5f9;
+            }
+            p {
+                color: #cbd5e1;
+            }
+            .zen-quote {
+                color: #64748b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-content">
+        <h1>Connection paused</h1>
+        <p>Like awareness itself, this page remains present even when the connection to the network has dissolved. Your practice continues, regardless of connectivity.</p>
+        <button class="retry-btn" onclick="window.location.reload()">
+            Reconnect
+        </button>
+        <p class="zen-quote">
+            "The one who is not connected is always connected."
+        </p>
+    </div>
+</body>
+</html>

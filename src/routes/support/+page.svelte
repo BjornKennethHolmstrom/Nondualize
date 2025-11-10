@@ -154,40 +154,40 @@
     
     <!-- Header -->
     <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-light mb-4 text-slate-800 dark:text-slate-100">
+      <h1 class="text-4xl md:text-5xl font-light mb-4 text-primary-900 dark:text-primary-100">
         {pageTranslations.title}
       </h1>
-      <p class="text-xl text-slate-600 dark:text-slate-400 font-light">
+      <p class="text-xl text-primary-600 dark:text-primary-400 font-light">
         {pageTranslations.subtitle}
       </p>
     </div>
 
     <!-- Current Phase -->
-    <div class="bg-slate-50 dark:bg-slate-800 rounded-lg p-8 mb-12 border-l-4 border-blue-500">
-      <h2 class="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-4">
+    <div class="bg-primary-50 dark:bg-primary-900 rounded-lg p-8 mb-12 border-l-4 border-primary-400">
+      <h2 class="text-2xl font-semibold text-primary-900 dark:text-primary-100 mb-4">
         {pageTranslations.currentPhase.title}
       </h2>
-      <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
+      <p class="text-primary-700 dark:text-primary-300 leading-relaxed text-lg">
         {pageTranslations.currentPhase.content}
       </p>
     </div>
 
     <!-- Support Ways -->
-    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-8 mb-12">
-      <h2 class="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-8 text-center">
+    <div class="bg-white dark:bg-primary-800 rounded-lg shadow-sm p-8 mb-12">
+      <h2 class="text-2xl font-semibold text-primary-900 dark:text-primary-100 mb-8 text-center">
         {pageTranslations.supportWays.title}
       </h2>
       
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Spiritual Support -->
         <div class="space-y-4">
-          <h3 class="text-lg font-semibold text-slate-700 dark:text-slate-200">
+          <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200">
             {pageTranslations.supportWays.spiritual.title}
           </h3>
           <ul class="space-y-3">
             {#each pageTranslations.supportWays.spiritual.items as item}
-              <li class="flex items-start text-slate-600 dark:text-slate-400">
-                <span class="text-blue-500 mr-2 mt-1 flex-shrink-0">•</span>
+              <li class="flex items-start text-primary-700 dark:text-primary-300">
+                <span class="text-primary-500 dark:text-primary-400 mr-2 mt-1 flex-shrink-0">•</span>
                 <span>{item}</span>
               </li>
             {/each}
@@ -196,13 +196,13 @@
 
         <!-- Knowledge Support -->
         <div class="space-y-4">
-          <h3 class="text-lg font-semibold text-slate-700 dark:text-slate-200">
+          <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200">
             {pageTranslations.supportWays.knowledge.title}
           </h3>
           <ul class="space-y-3">
             {#each pageTranslations.supportWays.knowledge.items as item}
-              <li class="flex items-start text-slate-600 dark:text-slate-400">
-                <span class="text-green-500 mr-2 mt-1 flex-shrink-0">•</span>
+              <li class="flex items-start text-primary-700 dark:text-primary-300">
+                <span class="text-primary-500 dark:text-primary-400 mr-2 mt-1 flex-shrink-0">•</span>
                 <span>{item}</span>
               </li>
             {/each}
@@ -211,14 +211,14 @@
       </div>
 
       <!-- Community Support -->
-      <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
-        <h3 class="text-lg font-semibold text-slate-700 dark:text-slate-200 mb-4">
+      <div class="mt-8 pt-6 border-t border-primary-200 dark:border-primary-700">
+        <h3 class="text-lg font-semibold text-primary-800 dark:text-primary-200 mb-4">
           {pageTranslations.supportWays.community.title}
         </h3>
         <ul class="grid md:grid-cols-2 gap-4">
           {#each pageTranslations.supportWays.community.items as item}
-            <li class="flex items-start text-slate-600 dark:text-slate-400">
-              <span class="text-purple-500 mr-2 mt-1 flex-shrink-0">•</span>
+            <li class="flex items-start text-primary-700 dark:text-primary-300">
+              <span class="text-primary-500 dark:text-primary-400 mr-2 mt-1 flex-shrink-0">•</span>
               <span>{item}</span>
             </li>
           {/each}
@@ -227,17 +227,17 @@
     </div>
 
     <!-- Future Vision -->
-    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg text-white p-8 mb-12">
+    <div class="bg-primary-800 dark:bg-primary-900 rounded-lg text-primary-50 p-8 mb-12">
       <h2 class="text-2xl font-semibold mb-6">
         {pageTranslations.futureVision.title}
       </h2>
-      <p class="text-blue-100 mb-6 leading-relaxed text-lg">
+      <p class="text-primary-200 mb-6 leading-relaxed text-lg">
         {pageTranslations.futureVision.content}
       </p>
       <ul class="space-y-3">
         {#each pageTranslations.futureVision.principles as principle}
-          <li class="flex items-start text-blue-50">
-            <span class="text-yellow-300 mr-2 mt-1 flex-shrink-0">•</span>
+          <li class="flex items-start text-primary-100">
+            <span class="text-primary-300 mr-2 mt-1 flex-shrink-0">•</span>
             <span>{principle}</span>
           </li>
         {/each}
@@ -245,14 +245,14 @@
     </div>
 
     <!-- Paradox Section -->
-    <div class="text-center bg-slate-50 dark:bg-slate-800 rounded-lg p-8">
-      <h2 class="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-4">
+    <div class="text-center bg-primary-50 dark:bg-primary-800 rounded-lg p-8">
+      <h2 class="text-2xl font-semibold text-primary-900 dark:text-primary-100 mb-4">
         {pageTranslations.paradox.title}
       </h2>
-      <p class="text-slate-700 dark:text-slate-300 text-lg mb-6 max-w-2xl mx-auto leading-relaxed italic">
+      <p class="text-primary-700 dark:text-primary-300 text-lg mb-6 max-w-2xl mx-auto leading-relaxed italic">
         {pageTranslations.paradox.content}
       </p>
-      <p class="text-slate-600 dark:text-slate-400 font-medium">
+      <p class="text-primary-600 dark:text-primary-400 font-medium">
         {pageTranslations.paradox.signature}
       </p>
     </div>
