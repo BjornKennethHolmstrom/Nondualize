@@ -249,7 +249,7 @@
           {pageTranslations.author.text}
         </p>
         <a
-          href="https://bjornkennethholmstrom.wordpress.com/"
+          href="https://bjornkennethholmstrom.org/"
           target="_blank"
           rel="noopener"
           class="inline-block px-6 py-3 bg-slate-600 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white rounded-lg transition-colors"
