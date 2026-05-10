@@ -63,7 +63,7 @@
       },
       author: {
         title: "About the author",
-        text: "Nondualize is created by Björn Kenneth Holmström, who writes about consciousness, philosophy, and the integration of developmental and non-dual perspectives.",
+        text: "Nondualize is created by Björn Kenneth Holmström, who writes about consciousness, philosophy, and the integration of developmental and non-dual perspectives. He also applies systems thinking to governance design.",
         link: "Visit personal website"
       }
     },
@@ -123,7 +123,7 @@
       },
       author: {
         title: "Om författaren",
-        text: "Nondualize skapas av Björn Kenneth Holmström, som skriver om medvetande, filosofi och integrationen av utvecklingsmässiga och icke-duala perspektiv.",
+        text: "Nondualize skapas av Björn Kenneth Holmström, som skriver om medvetande, filosofi och integrationen av utvecklingsmässiga och icke-duala perspektiv. Han tillämpar även systemtänkande inom styrningsdesign.",
         link: "Besök personlig webbplats"
       }
     }
